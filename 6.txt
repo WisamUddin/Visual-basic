@@ -1,0 +1,14 @@
+   Declare i As String
+        i <--- ""
+
+        Output("Enter the number of Donuts you want: ")
+        i <--- Input
+
+
+        Repeat i < 10 Then
+
+          Output("Numer of Donuts are  " & i)
+        Else
+            Output("Number of donuts are Many")
+        End Repeat
+

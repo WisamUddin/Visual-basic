@@ -1,0 +1,31 @@
+ Declare Char3, Char1, Char2 As Char
+        Declare maximum, Count, i As Integer
+
+        Char1 <-- ""
+        Char3 <-- ""
+
+        Count <-- 0
+
+        Declare Phrase As String
+        output("Enter Phrase: ")
+        Phrase <-- Input
+
+        Repeat i <-- 1 To Len(Phrase)
+            Char2 <-- Mid(Phrase, i, 1)
+            Count <-- 0
+
+            Declare X As Integer
+
+            Repeat X <-- 1 To Len(Phrase)
+                Char1 <-- Mid(Phrase, X, 1)
+                If Char1 <-- Char2 Then Count <-- Count + 1
+
+            Untill
+
+            If Count > maximum Then
+                maximum <-- Count
+                Char3 <-- Char2
+            End If
+        Untill
+        output(Char3 & " appeared " & maximum & " number of times.")
+        Console.ReadKey()

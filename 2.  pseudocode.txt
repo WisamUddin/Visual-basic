@@ -1,0 +1,43 @@
+ Dim X, Char1, str1, char2 As String
+
+
+        X <--  ""
+
+        Char1 <--  ""
+        str1 <--  ""
+        char2 <--  ""
+
+
+        Output("Enter String: ")
+        X <--  Input
+
+        Output("Enter char to remove: ")
+        Char1 <-- Input
+
+        Output("Enter word that you want to replce: ")
+        str1 <--  Input
+
+        Dim i As Integer
+        Dim message As String
+        i <--  0
+        message = ""
+        For i <--  1 To Len(X)
+            char2 = Mid(X, i, 1)
+            If char2 <--  Char1 Then
+                char2 <--  str1
+            End If
+            message <--  message & char2
+        Next
+         Output("replaced string = " & message)
+    
+    
+    
+    
+    
+    
+    
+    
+    Console.ReadKey()
+    
+    
+    

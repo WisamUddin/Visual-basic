@@ -1,0 +1,18 @@
+  Declare UserInput As String
+        Declare char1, char2 As Character
+
+
+        Output("Enter a string")
+        UserInput <-- Input
+        char1 <-- Left(UserInput, 1)
+
+
+        Output(char1)
+        repeat i <-- 1 To Len(UserInput) - 1
+            char2 <-- Mid(UserInput, i + 1, 1)
+            If char2 <-- char1 Then
+                char2 <-- "*"
+            End If
+            Output(char2)
+        Next
+        Console.ReadKey() 

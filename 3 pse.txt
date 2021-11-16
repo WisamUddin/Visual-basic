@@ -1,0 +1,25 @@
+       Declare A, Char1, B As String
+        Declare i, cCount As Integer
+
+        i <-- 0
+        cCount <--  0
+
+        A <-- ""
+
+        Char1 = ""
+        B <-- ""
+
+       Output ("Enter a sentence ")
+        A <-- Input
+
+        Output("Enter character to search: ")
+        B <--Input
+
+        Repeat i <--1 To Len(A)
+            Char1 <--Mid(A, i, 1)
+            If UCase(Char1) <-- UCase(B) Until
+                cCount<--cCount + 1
+            End If
+        Next
+       Output(cCount)
+        Console.ReadKey()

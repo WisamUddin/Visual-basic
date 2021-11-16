@@ -1,0 +1,22 @@
+Declare verb As String
+        Declare command As Integer
+
+
+        If command <-- "8" Then
+
+
+            Output("Enter Verb: ")
+            verb <-- input
+
+            If Len(verb) > 2 Then
+                If Right(verb, 3) <> "ing" Then
+                    Output(verb & "ly")
+
+                End If
+
+            ElseIf Len(verb) < 3 Then
+                Output(verb)
+
+
+            End If
+            Console.ReadKey()
