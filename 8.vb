@@ -1,16 +1,18 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim str1 As String
-        Dim char1 As Char
-        Dim char2 As Char
+         Dim UserInput As String
+        Dim char1, char2 As Char
 
-        Console.WriteLine("Enter a statement")
-        str1 = Console.ReadLine
-        char1 = Left(str1, 1)
+
+        Console.WriteLine("Enter a string")
+        UserInput = Console.ReadLine
+        char1 = Left(UserInput, 1)
+
+
         Console.Write(char1)
-        For i = 1 To Len(str1) - 1
-            char2 = Mid(str1, (i + 1), 1)
+        For i = 1 To Len(UserInput) - 1
+            char2 = Mid(UserInput, i + 1, 1)
             If char2 = char1 Then
                 char2 = "*"
             End If
