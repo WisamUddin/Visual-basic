@@ -1,34 +1,50 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim A, message, C, D, E As String
-        Dim count As Integer
+       Dim X, Char1, str1, char2 As String
 
-        A = ""
+
+        X = ""
+
+        Char1 = ""
+        str1 = ""
+        char2 = ""
+
+
+        Console.Write("Enter String: ")
+        X = Console.ReadLine
+
+        Console.Write("Enter char to remove: ")
+        Char1 = Console.ReadLine
+
+        Console.Write("Enter word that you want to replce: ")
+        str1 = Console.ReadLine
+
+        Dim i As Integer
+        Dim message As String
+        i = 0
         message = ""
+        For i = 1 To Len(X)
+            char2 = Mid(X, i, 1)
+            If char2 = Char1 Then
+                char2 = str1
+            End If
+            message = message & char2
+        Next
 
-        C = ""
-        D = ""
-        E = ""
-        count = 0
-
-        Console.Write("Enter Your Sentence: ")
-        A = Console.ReadLine
-        Console.Write("Enter Char you want to replace")
-        C = Console.ReadLine
-        Console.Write("Enter Char you want to replace : ")
-        D = Console.ReadLine
-
-        For count = 1 To Len(A)
-            E = Mid(A, count, 1)
-        If  E = C Then 
-            E= D
-        End If
-        message=  E
-
-        Console.WriteLine("Your tas has been completed" & message)
-            Console.ReadLine()
-            Console.ReadKey()
+        Console.WriteLine("replaced string = " & message)
+    
+    
+    
+    
+    
+    
+    
+    
+    Console.ReadKey()
+    
+    
+    
 
 
 
