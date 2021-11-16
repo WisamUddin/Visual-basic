@@ -1,11 +1,11 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim A, B, C, D, E As String
+        Dim A, message, C, D, E As String
         Dim count As Integer
 
         A = ""
-        B = ""
+        message = ""
 
         C = ""
         D = ""
@@ -16,15 +16,17 @@
         A = Console.ReadLine
         Console.Write("Enter Char you want to replace")
         C = Console.ReadLine
-        Console.Write("Enter Char you want to replace with: ")
+        Console.Write("Enter Char you want to replace : ")
         D = Console.ReadLine
 
         For count = 1 To Len(A)
             E = Mid(A, count, 1)
-            Dim message As String = ""
-            message = IIf(B = "B", "E")
+        If  E = C Then 
+            E= D
+        End If
+        message=  E
 
-            Console.WriteLine("we are unable to complete your task" & message)
+        Console.WriteLine("Your tas has been completed" & message)
             Console.ReadLine()
             Console.ReadKey()
 
