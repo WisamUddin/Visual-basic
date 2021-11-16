@@ -1,7 +1,7 @@
 ﻿Module Module1
 
     Sub Main()
-    Dim A, Char1, B As String
+         Dim A, Char1, B As String
         Dim i, cCount As Integer
 
         i = 0
@@ -12,10 +12,10 @@
         Char1 = ""
         B = ""
 
-        Console.Write("Enter a String ")
+        Console.Write("Enter a sentence ")
         A = Console.ReadLine
 
-        Console.Write("Enter character to search for: ")
+        Console.Write("Enter character to search: ")
         B = Console.ReadLine
 
         For i = 1 To Len(A)
